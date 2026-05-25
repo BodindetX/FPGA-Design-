@@ -357,4 +357,3 @@ memory_initialization_vector=
 ---
 
 *README นี้ครอบคลุมเฉพาะส่วน FPGA HDL ของโปรเจกต์*  
-*สำหรับส่วน MATLAB Digital Twin และ Fault Injection ดูได้ที่ [`README_DELIVERY.md`](./README_DELIVERY.md)*

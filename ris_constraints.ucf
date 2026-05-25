@@ -1,0 +1,26 @@
+# ====================================================================
+# Xilinx User Constraint File (UCF) for Virtex-5 ML501 Platform
+# Project: RIS FPGA Controller Architecture
+# Target Device: XC5VLX50-FFG676
+# ====================================================================
+
+# 1. Clock Timing Constraints (100 MHz Onboard Crystal Oscillator)
+NET "clk_in" TNM_NET = "clk_in_grp";
+TIMESPEC TS_clk_in = PERIOD "clk_in_grp" 10.000 ns HIGH 50.0%;
+
+# 2. Pin Location Constraints (ML501 Evaluation Board References)
+
+# Onboard 100 MHz Single-Ended Clock Pin (AH15 on XC5VLX50)
+NET "clk_in" LOC = "AH15" | IOSTANDARD = LVCMOS33;
+
+# Active-low Reset Pin (User Pushbutton SW4 - E7 on XC5VLX50)
+NET "rst_n" LOC = "E7" | IOSTANDARD = LVCMOS33 | PULLUP;
+
+# 3. Output Shift Register Interface Pins (Routed to J5 Expansion Header)
+# Configuration: Fast Slew rate and 12 mA Drive Strength to drive physical diode shift registers
+NET "ris_sclk"  LOC = "AE11" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 12;
+NET "ris_sdata" LOC = "AE12" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 12;
+NET "ris_latch" LOC = "AE13" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 12;
+
+# Status Pin (User LED DS11 - AD24 on XC5VLX50)
+NET "busy"      LOC = "AD24" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;

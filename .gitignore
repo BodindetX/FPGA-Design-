@@ -1,0 +1,70 @@
+# =============================================
+# .gitignore for RIS FPGA Controller Project
+# =============================================
+
+# --- MATLAB Files (not part of FPGA repo) ---
+*.m
+*.mat
+*.fig
+*.asv
+
+# --- Output / Generated Directories ---
+figures/
+outputs/
+data/
+plotting/
+tools/
+core/
+
+# --- Xilinx / Vivado Generated Files ---
+*.jou
+*.log
+*.str
+*.pb
+*.dcp
+*.rpt
+*.xpr
+*.bit
+*.bin
+*.mcs
+*.ltx
+*.vds
+*.veo
+*.veo
+.Xil/
+vivado*/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.cache/
+*.hw/
+*.sw/
+
+# --- ISE Generated Files ---
+*.ngc
+*.ngd
+*.ncd
+*.pcf
+*.bgn
+*.bld
+*.mrp
+*.map
+*.twr
+*.twx
+*.xwbt
+*.par
+*.ptwx
+*.unroutes
+*.xml
+_ngo/
+xlnx_auto_*/
+isim/
+isim.wdb
+
+# --- Windows ---
+Thumbs.db
+desktop.ini
+
+# --- Editor ---
+.vscode/
+*.swp
